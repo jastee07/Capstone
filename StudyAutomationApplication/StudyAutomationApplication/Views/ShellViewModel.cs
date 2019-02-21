@@ -2,13 +2,15 @@
 
 namespace SAA.Views
 {
-    public class ShellViewModel : Screen
+    public class ShellViewModel : Conductor<object>.Collection.OneActive
     {
         /// <summary>
         /// Default Constructor
         /// </summary>
         public ShellViewModel()
         {
+
         }
+
     }
 }

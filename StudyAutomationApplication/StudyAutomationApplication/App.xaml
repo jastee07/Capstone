@@ -5,9 +5,14 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!-- Caliburn Bootstrapper Setup -->
                 <ResourceDictionary>
                     <local:Bootstrapper x:Key="Bootstrapper"/>
                 </ResourceDictionary>
+                
+                <!-- Styling -->
+                <ResourceDictionary Source="Colors.xaml" />
+                <ResourceDictionary Source="Styles/RadioButtonStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

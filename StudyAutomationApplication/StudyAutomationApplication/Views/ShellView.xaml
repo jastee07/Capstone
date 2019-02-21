@@ -6,8 +6,64 @@
         xmlns:local="clr-namespace:SAA.Views"
         mc:Ignorable="d"
         Title="Study Automation Application"
-        Height="450" Width="800">
+        Height="450"
+        Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Side Menu -->
+        <StackPanel Orientation="Vertical"
+                    Background="{StaticResource ApplicationColorBrush}">
+            <RadioButton GroupName="SideMenuButtons"
+                         Checked="RadioButton_Checked"                         
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Home"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Daily Studies"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Basic Study"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Update .Sav Cases"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Scale Generation"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Seasonal Assessment: Cooper Generation"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Seasonal Assessment: Import / Export Study"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+        </StackPanel>
         
+        <!-- Page Viewer -->
+        <ContentControl x:Name="ActiveItem"
+                        Grid.Column="1" />
     </Grid>
 </Window>
