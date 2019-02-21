@@ -6,19 +6,20 @@
         xmlns:local="clr-namespace:SAA.Views"
         mc:Ignorable="d"
         Title="Study Automation Application"
-        Height="450"
-        Width="800">
+        Height="450" MinHeight="400"
+        Width="800" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" 
+                              MaxWidth="150"/>
             <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
 
-        <!-- Side Menu -->
+        <!-- Left Side Menu -->
         <StackPanel Orientation="Vertical"
                     Background="{StaticResource ApplicationColorBrush}">
             <RadioButton GroupName="SideMenuButtons"
-                         Checked="RadioButton_Checked"                         
+                         Checked="RadioButton_Checked"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Home"
@@ -61,9 +62,21 @@
                            TextWrapping="Wrap" />
             </RadioButton>
         </StackPanel>
-        
-        <!-- Page Viewer -->
-        <ContentControl x:Name="ActiveItem"
-                        Grid.Column="1" />
+
+        <!-- Right Content Viewer -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ContentControl x:Name="ActiveItem"
+                            Grid.Row="0" />
+            <TextBox x:Name="LogBox"
+                     IsReadOnly="True"
+                     Margin="5"
+                     Grid.Row="1" />
+        </Grid>
+
+
     </Grid>
 </Window>

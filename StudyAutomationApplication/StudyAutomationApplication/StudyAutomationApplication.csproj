@@ -71,11 +71,53 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\BasicStudyView.xaml.cs">
+      <DependentUpon>BasicStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BasicStudyViewModel.cs">
+      <DependentUpon>BasicStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CooperGenerationView.xaml.cs">
+      <DependentUpon>CooperGenerationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CooperGenerationViewModel.cs">
+      <DependentUpon>CooperGenerationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DailyStudyView.xaml.cs">
+      <DependentUpon>DailyStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DailyStudyViewModel.cs">
+      <DependentUpon>DailyStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeViewModel.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScaleGenerationView.xaml.cs">
+      <DependentUpon>ScaleGenerationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScaleGenerationViewModel.cs">
+      <DependentUpon>ScaleGenerationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellViewModel.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransferStudyView.xaml.cs">
+      <DependentUpon>TransferStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransferStudyViewModel.cs">
+      <DependentUpon>TransferStudyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateCasesView.xaml.cs">
+      <DependentUpon>UpdateCasesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateCasesViewModel.cs">
+      <DependentUpon>UpdateCasesView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -115,14 +157,44 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\BasicStudyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CooperGenerationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DailyStudyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ScaleGenerationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TransferStudyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpdateCasesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EKPC_Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
