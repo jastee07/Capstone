@@ -18,47 +18,60 @@
         <!-- Left Side Menu -->
         <StackPanel Orientation="Vertical"
                     Background="{StaticResource ApplicationColorBrush}">
-            <RadioButton GroupName="SideMenuButtons"
-                         Checked="RadioButton_Checked"
+            <RadioButton IsChecked="{Binding IsHomeActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Home"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsDailyStudyActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Daily Studies"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsBasicStudyActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Basic Study"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsUpdateCasesActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Update .Sav Cases"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsScaleGenerationActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Scale Generation"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsCooperGenerationActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Seasonal Assessment: Cooper Generation"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton GroupName="SideMenuButtons"
+            <RadioButton IsChecked="{Binding IsTransferStudyActive}"
+                         GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
                 <TextBlock Text="Seasonal Assessment: Import / Export Study"
+                           TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
         </StackPanel>
@@ -70,6 +83,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <ContentControl x:Name="ActiveItem"
+                            Margin="5"
                             Grid.Row="0" />
             <TextBox x:Name="LogBox"
                      IsReadOnly="True"
