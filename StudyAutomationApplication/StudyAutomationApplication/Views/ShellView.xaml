@@ -6,8 +6,91 @@
         xmlns:local="clr-namespace:SAA.Views"
         mc:Ignorable="d"
         Title="Study Automation Application"
-        Height="450" Width="800">
+        Height="450" MinHeight="400"
+        Width="800" MinWidth="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" 
+                              MaxWidth="150"/>
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Side Menu -->
+        <StackPanel Orientation="Vertical"
+                    Background="{StaticResource ApplicationColorBrush}">
+            <RadioButton IsChecked="{Binding IsHomeActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Home"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsDailyStudyActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Daily Studies"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsBasicStudyActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Basic Study"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsUpdateCasesActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Update .Sav Cases"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsScaleGenerationActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Scale Generation"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsCooperGenerationActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Seasonal Assessment: Cooper Generation"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+            <RadioButton IsChecked="{Binding IsTransferStudyActive}"
+                         GroupName="SideMenuButtons"
+                         Style="{StaticResource SideMenuRadioButtonStyle}"
+                         Grid.Column="0">
+                <TextBlock Text="Seasonal Assessment: Import / Export Study"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </RadioButton>
+        </StackPanel>
+
+        <!-- Right Content Viewer -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ContentControl x:Name="ActiveItem"
+                            Margin="5"
+                            Grid.Row="0" />
+            <TextBox x:Name="LogBox"
+                     IsReadOnly="True"
+                     Margin="5"
+                     Grid.Row="1" />
+        </Grid>
+
+
     </Grid>
 </Window>

@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SAA">
+    <Color x:Key="ApplicationColor" R="1" G="115" B="187" A="255"/>
+    <SolidColorBrush x:Key="ApplicationColorBrush"
+                     Color="{StaticResource ApplicationColor}" />
+    <Color x:Key="DarkApplicationColor" R="0" G="57" B="97" A="255"/>
+    <SolidColorBrush x:Key="DarkApplicationColorBrush"
+                     Color="{StaticResource DarkApplicationColor}" />
+</ResourceDictionary>
