@@ -4,9 +4,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SAA.Views"
+             xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="This is the BasicStudyView" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Basecase" Grid.Row="0" Grid.Column="0"></Button>
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select CSV" Grid.Row="1" Grid.Column="0"></Button>
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Sub File" Grid.Row="2" Grid.Column="0"></Button>
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Mon File" Grid.Row="3" Grid.Column="0"></Button>
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Con File" Grid.Row="4" Grid.Column="0"></Button>
+        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Output File" Grid.Row="5" Grid.Column="0"></Button>
+
+        <TextBox Grid.Row="0" Grid.Column="1" Height="30" Text="{Binding Path=Basecase, Mode=TwoWay}"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="30"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="30"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Height="30"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1" Height="30"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="1" Height="30"></TextBox>
+
+        <Border Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <StackPanel Margin="0,0,0,0" Orientation="Horizontal">
+                <Button Content="Run" Margin="20,0,75,0" Width="100"></Button>
+                <Button Content="Abort" Width="100"></Button>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </UserControl>
