@@ -58,7 +58,7 @@
                            TextAlignment="Center"
                            TextWrapping="Wrap" />
             </RadioButton>
-            <RadioButton IsChecked="{Binding IsCooperGenerationActive}"
+            <!--<RadioButton IsChecked="{Binding IsCooperGenerationActive}"
                          GroupName="SideMenuButtons"
                          Style="{StaticResource SideMenuRadioButtonStyle}"
                          Grid.Column="0">
@@ -73,7 +73,7 @@
                 <TextBlock Text="Seasonal Assessment: Import / Export Study"
                            TextAlignment="Center"
                            TextWrapping="Wrap" />
-            </RadioButton>
+            </RadioButton> -->
         </StackPanel>
 
         <!-- Right Content Viewer -->
@@ -87,10 +87,9 @@
                             Grid.Row="0" />
             <TextBox x:Name="LogBox"
                      IsReadOnly="True"
+                     HorizontalScrollBarVisibility="Auto"
                      Margin="5"
                      Grid.Row="1" />
         </Grid>
-
-
     </Grid>
 </Window>
