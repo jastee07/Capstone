@@ -8,7 +8,7 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
     <GroupBox Header="Enter Information">
-        <Grid Margin="0, 5">
+        <Grid Margin="0, 2.5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*" />
                 <RowDefinition Height="0.1*" />
@@ -26,44 +26,62 @@
                 <ColumnDefinition Width="0.7*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Height="25"
-                    Grid.Row="0">Select BaseCase</Button>
-            <Button Grid.Row="3"
-                    Height="25">Output Location</Button>
+            <!-- SELECT BASECASE -->
+            <Button Content="Select Basecase"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="0"
+                     Grid.Column="1" />
+            <Button Content="Display Selected .Sav Cases"
+                    Height="25"
+                    Width="200"
+                    HorizontalAlignment="Left"
+                    Grid.Row="1"
+                    Grid.Column="1" />
 
-            <Button Grid.Row="5"
-                    Height="25">Py or idv File(s)</Button>
+            <!-- OUTPUT LOCATION -->
+            <Button Content="Output Location"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="2"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="2"
+                     Grid.Column="2" />
 
-            <Button Grid.Row="8"
-                    Height="25">Run</Button>
-
-            <Button Grid.Row="9">Abort</Button>
-            <Button Grid.Row="2"
-                    Grid.Column="2"
-                    Height="25">Display Selected .Sav Cases</Button>
-            <Button Grid.Row="6"
-                    Grid.Column="2"
-                    Height="25">Display Selected Executable Files</Button>
-
-            <TextBox Grid.Column="2"
-                     Grid.ColumnSpan="3"
-                     Grid.Row="1"
+            <!-- PY OR IDV FILE(S) -->
+            <Button Content="Py or idv File(s)"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="3"
+                    Grid.Column="0" />
+            <TextBox Grid.Row="3"
+                     Grid.Column="2"                     
                      Height="25"></TextBox>
-            <TextBox Grid.Column="2"
-                     Grid.ColumnSpan="3"
-                     Grid.Row="3"
-                     Height="25"></TextBox>
-            <TextBox Grid.Column="2"
-                     Grid.ColumnSpan="3"
-                     Grid.Row="5"
-                     Height="25"></TextBox>
+            <Button Content="Display Selected Executable Files"
+                    Height="25"
+                    Width="200"
+                    HorizontalAlignment="Left"
+                    Grid.Row="4"
+                    Grid.Column="2" />
 
-
+            <!-- EXECUTION CONTROLS -->
             <StackPanel Orientation="Horizontal"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        Grid.ColumnSpan="3">
-
+                        HorizontalAlignment="Center"
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2">
+                <Button Content="Run"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
+                <Button Content="Abort"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
             </StackPanel>
         </Grid>
     </GroupBox>
