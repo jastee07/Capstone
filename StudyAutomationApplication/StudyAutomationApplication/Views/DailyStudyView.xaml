@@ -7,84 +7,82 @@
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
+    <GroupBox Header="Enter Information">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
-        <TextBlock Text="Enter Information"
-                   Grid.Row="0" />
-
-        <Button Grid.Row="1"
-                Height="25">Select Briefcase</Button>
-        <Button Grid.Row="2"
-                Height="25">Display Selected Case(s)</Button>
-        <Button Grid.Row="3"
-                Height="25">Ext Outages Files</Button>
-        <Button Grid.Row="4"
-                Height="25">Sub File</Button>
-        <Button Grid.Row="5"
-                Height="25">Mon File</Button>
-        <Button Grid.Row="6"
-                Height="25">Output Location</Button>
-        <Button Grid.Row="7"
-                Height="25">Find Macro File</Button>
-        <Button Grid.Row="8"
-                Height="25">Run</Button>
-        <Button Grid.Row="9"
-                Height="25">Create Report</Button>
-        <Button Grid.Row="10">Abort</Button>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="1"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="3"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="4"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="5"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="6"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="7"
-                 Height="25"></TextBox>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    Grid.ColumnSpan="3">
-            <Label>From:</Label>
-            <ComboBox>
-            </ComboBox>
-            <Label>To:</Label>
-            <ComboBox>
-            </ComboBox>
-        </StackPanel>
-    </Grid>
+            <Button Grid.Row="0"
+                    Height="25">Select Briefcase</Button>
+            <Button Grid.Row="1"
+                    Height="25">Display Selected Case(s)</Button>
+            <Button Grid.Row="2"
+                    Height="25">Ext Outages Files</Button>
+            <Button Grid.Row="3"
+                    Height="25">Sub File</Button>
+            <Button Grid.Row="4"
+                    Height="25">Mon File</Button>
+            <Button Grid.Row="5"
+                    Height="25">Output Location</Button>
+            <Button Grid.Row="6"
+                    Height="25">Find Macro File</Button>
+            <Button Grid.Row="7"
+                    Height="25">Run</Button>
+            <Button Grid.Row="8"
+                    Height="25">Create Report</Button>
+            <Button Grid.Row="9">Abort</Button>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="0"
+                     Height="25"></TextBox>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="2"
+                     Height="25"></TextBox>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="3"
+                     Height="25"></TextBox>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="4"
+                     Height="25"></TextBox>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="5"
+                     Height="25"></TextBox>
+            <TextBox Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Grid.Row="6"
+                     Height="25"></TextBox>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="3">
+                <Label>From:</Label>
+                <ComboBox>
+                </ComboBox>
+                <Label>To:</Label>
+                <ComboBox>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+    </GroupBox>
 </UserControl>

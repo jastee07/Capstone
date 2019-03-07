@@ -1,48 +1,127 @@
 ﻿<UserControl x:Class="SAA.Views.BasicStudyView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:SAA.Views"
              xmlns:cal="http://www.caliburnproject.org"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*"></ColumnDefinition>
-            <ColumnDefinition Width="0.7*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <GroupBox Header="Enter Information">
+        <Grid Margin="0, 5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Basecase" Grid.Row="0" Grid.Column="0"></Button>
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select CSV" Grid.Row="1" Grid.Column="0"></Button>
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Sub File" Grid.Row="2" Grid.Column="0"></Button>
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Mon File" Grid.Row="3" Grid.Column="0"></Button>
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Select Con File" Grid.Row="4" Grid.Column="0"></Button>
-        <Button Margin="5" cal:Message.Attach="OpenFileExplorer()" Content="Output File" Grid.Row="5" Grid.Column="0"></Button>
+            <!-- SELECT BASECASE -->
+            <Button Content="Select Basecase"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+            <TextBox Text="{Binding Path=Basecase, Mode=TwoWay}"
+                     Height="25"
+                     Grid.Row="0"
+                     Grid.Column="1" />
+            <Button Content="Display Selected Case(s)"
+                    Height="25"
+                    Width="200"
+                    HorizontalAlignment="Left"
+                    Grid.Row="1"
+                    Grid.Column="1" />
 
-        <TextBox Grid.Row="0" Grid.Column="1" Height="30" Text="{Binding Path=Basecase, Mode=TwoWay}"></TextBox>
-        <TextBox Grid.Row="1" Grid.Column="1" Height="30"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1" Height="30"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="1" Height="30"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="1" Height="30"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="1" Height="30"></TextBox>
+            <!-- SELECT CSV -->
+            <Button Content="Select CSV"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="2"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="2"
+                     Grid.Column="1" />
+            <Button Content="Display Selected CSV File(s)"
+                    Height="25"
+                    Width="200"
+                    HorizontalAlignment="Left"
+                    Grid.Row="3"
+                    Grid.Column="1" />
 
-        <Border Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <StackPanel Margin="0,0,0,0" Orientation="Horizontal">
-                <Button Content="Run" Margin="20,0,75,0" Width="100"></Button>
-                <Button Content="Abort" Width="100"></Button>
+            <!-- SELECT SUB FILE -->
+            <Button Content="Select Sub File"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="4"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="4"
+                     Grid.Column="1" />
+
+            <!-- SLECT MON FILE -->
+            <Button Content="Select Mon File"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="5"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="5"
+                     Grid.Column="1" />
+
+            <!-- SELECT CON FILE -->
+            <Button Content="Select Con File"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="6"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="6"
+                     Grid.Column="1" />
+
+            <!-- OUTPUT FILE -->
+            <Button Content="Output File"
+                    cal:Message.Attach="OpenFileExplorer()"
+                    Margin="5,0"
+                    Height="25"
+                    Grid.Row="7"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="7"
+                     Grid.Column="1" />
+
+            <!-- EXECUTION CONTROLS -->
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2">
+                <Button Content="Run"
+                        Height="25"
+                        Width="100"
+                        Margin="5, 0" />
+                <Button Content="Abort"
+                        Height="25"
+                        Width="100"
+                        Margin="5, 0" />
             </StackPanel>
-        </Border>
-
-    </Grid>
+        </Grid>
+    </GroupBox>
 </UserControl>
