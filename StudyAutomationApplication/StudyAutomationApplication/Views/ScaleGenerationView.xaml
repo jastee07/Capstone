@@ -8,79 +8,88 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
     <GroupBox Header="Enter Information">
-        <Grid>
+        <Grid Margin="0, 2.5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.7*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
             <!-- CASE SELECT -->
-            <Button Content="Select a Case"
-                    Margin="5"
-                    Grid.Row="0" 
-                    Grid.Column="0"/>
-            <TextBox  Margin="5"
+            <Button Content="Select a Case"                    
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+            <TextBox Height="25"
                      Grid.Row="0"
-                     Grid.Column="1"/>
+                     Grid.Column="1" />
 
             <!-- PRIORITY FILE -->
-            <Button Content="Priority CSV File"
-                    Margin="5"
+            <Button Content="Priority CSV File"                    
+                    Margin="5, 0"
+                    Height="25"
                     Grid.Row="1"
                     Grid.Column="0" />
-            <TextBox  Margin="5"
+            <TextBox  Height="25"
                       Grid.Row="1"
                       Grid.Column="1" />
 
             <!-- SLACK BUS PERCENT -->
-            <Button Content="Slack Bus Percent"
-                    Margin="5"
+            <Button Content="Slack Bus Percent"                    
+                    Margin="5, 0"
+                    Height="25"
                     Grid.Row="2"
                     Grid.Column="0" />
-            <TextBox  Margin="5"
-                      Grid.Row="2"
-                      Grid.Column="1" />
+            <TextBox Height="25"
+                     Grid.Row="2"
+                     Grid.Column="1" />
 
             <!-- LOCATION -->
-            <Button Content="Save Location"
-                    Margin="5"
+            <Button Content="Save Location"                    
+                    Margin="5,0"
+                    Height="25"
                     Grid.Row="3"
                     Grid.Column="0" />
-            <TextBox  Margin="5"
-                      Grid.Row="3"
-                      Grid.Column="1" />
+            <TextBox Height="25"
+                     Grid.Row="3"
+                     Grid.Column="1" />
 
             <!-- SMALLEST LOAD -->
-            <Button Content="Smallest Load"
-                    Margin="5"
+            <Button Content="Smallest Load"                    
+                    Margin="5, 0"
+                    Height="25"
                     Grid.Row="4"
                     Grid.Column="0" />
-            <TextBox  Margin="5"
-                      Grid.Row="4"
-                      Grid.Column="1" />
-            
+            <TextBox Height="25"
+                     Grid.Row="4"
+                     Grid.Column="1" />
+
             <!-- EXECUTION CONTROLS -->
             <StackPanel Orientation="Horizontal"
-                        Margin="5"
-                        Grid.Row="5"
-                        Grid.Column="1">
-                <Button Content="Run Study"
-                        Width="100"
-                        Margin="5"
-                        Grid.Row="5" />
-                <Button Content="Abort Study"
-                        Width="100"
-                        Margin="5"
-                        Grid.Row="5"
-                        Grid.Column="1" />
+                        HorizontalAlignment="Center"
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2">
+                <Button Content="Run"
+                        Margin="5, 0" 
+                        Height="25"
+                        Width="100" />                        
+                <Button Content="Abort"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
             </StackPanel>
         </Grid>
     </GroupBox>

@@ -7,84 +7,156 @@
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
+    <GroupBox Header="Enter Information">
+        <Grid Margin="0, 2.5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Enter Information"
-                   Grid.Row="0" />
+            <!-- SELECT BASECASE -->
+            <Button Content="Select Briefcase"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="0"
+                     Grid.Column="1" />
+            <Button Content="Display Selected Case(s)"
+                    HorizontalAlignment="Left"
+                    Height="25"
+                    Width="200"
+                    Grid.Row="1"
+                    Grid.Column="1" />
 
-        <Button Grid.Row="1"
-                Height="25">Select Briefcase</Button>
-        <Button Grid.Row="2"
-                Height="25">Display Selected Case(s)</Button>
-        <Button Grid.Row="3"
-                Height="25">Ext Outages Files</Button>
-        <Button Grid.Row="4"
-                Height="25">Sub File</Button>
-        <Button Grid.Row="5"
-                Height="25">Mon File</Button>
-        <Button Grid.Row="6"
-                Height="25">Output Location</Button>
-        <Button Grid.Row="7"
-                Height="25">Find Macro File</Button>
-        <Button Grid.Row="8"
-                Height="25">Run</Button>
-        <Button Grid.Row="9"
-                Height="25">Create Report</Button>
-        <Button Grid.Row="10">Abort</Button>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="1"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="3"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="4"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="5"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="6"
-                 Height="25"></TextBox>
-        <TextBox Grid.Column="2"
-                 Grid.ColumnSpan="3"
-                 Grid.Row="7"
-                 Height="25"></TextBox>
-        <StackPanel Orientation="Horizontal"
+            <!-- EXT OUTAGES FILES -->
+            <Button Content="Ext Outages Files"
+                    Margin="5, 0"
+                    Height="25"
                     Grid.Row="2"
-                    Grid.Column="2"
-                    Grid.ColumnSpan="3">
-            <Label>From:</Label>
-            <ComboBox>
-            </ComboBox>
-            <Label>To:</Label>
-            <ComboBox>
-            </ComboBox>
-        </StackPanel>
-    </Grid>
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="2"
+                     Grid.Column="1" />
+
+            <!-- SELECT SUB FILE -->
+            <Button Content="Select Sub File"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="3"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="3"
+                     Grid.Column="1" />
+
+            <!-- SELECT MON FILE -->
+            <Button Content="Select Mon File"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="4"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="4"
+                     Grid.Column="1" />
+
+            <!-- SELECT CON FILE -->
+            <Button Content="Select Con File"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="5"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="5"
+                     Grid.Column="1" />
+
+            <!-- OUTPUT LOCATION -->
+            <Button Content="Output Location"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="6"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="6"
+                     Grid.Column="1" />
+
+            <!-- FIND MACRO FILE -->
+            <Button Content="Find Macro File"
+                    Margin="5, 0"
+                    Height="25"
+                    Grid.Row="7"
+                    Grid.Column="0" />
+            <TextBox Height="25"
+                     Grid.Row="7"
+                     Grid.Column="1" />
+
+            <!-- OTHER CONTROLS -->
+            <UniformGrid Columns="4"
+                         Grid.Row="8"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="2">
+                <!-- FROM DATE PICKER -->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="From:"
+                           Height="25"
+                           Grid.Column="0" />
+                    <DatePicker Grid.Column="0" />
+                </StackPanel>
+
+                <!-- TO DATE PICKER -->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="To:"
+                           Height="25"
+                           Grid.Column="0" />
+                    <DatePicker Grid.Column="0" />
+                </StackPanel>
+
+                <!-- EKPC LOAD -->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="EKPC Load" />
+                    <TextBox Height="25"
+                             Width="80" />
+                </StackPanel>
+
+                <!-- KU LOAD -->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="KU Load" />
+                    <TextBox Height="25"
+                             Width="80" />
+                </StackPanel>
+            </UniformGrid>
+
+            <!-- EXECUTION CONTROLS -->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2">
+                <Button Content="Create Report"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
+                <Button Content="Run"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
+                <Button Content="Abort"
+                        Margin="5, 0"
+                        Height="25"
+                        Width="100" />
+            </StackPanel>
+        </Grid>
+    </GroupBox>
 </UserControl>
