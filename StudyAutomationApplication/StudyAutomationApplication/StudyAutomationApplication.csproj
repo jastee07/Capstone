@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
     </Reference>
@@ -44,8 +47,26 @@
     <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
     </Reference>
+    <Reference Include="FluentNHibernate, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.1.2\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.2.5\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -71,6 +92,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Persistence\DatabaseOperations.cs" />
+    <Compile Include="Mappings\BranchMap.cs" />
+    <Compile Include="Mappings\FRPSSEGeneratorMappingMap.cs" />
+    <Compile Include="Mappings\FRPSSEMappingMap.cs" />
+    <Compile Include="Mappings\GeneratorMap.cs" />
+    <Compile Include="Mappings\OutageBreakerLineLossMap.cs" />
+    <Compile Include="Mappings\OutageFormSubmissionMap.cs" />
+    <Compile Include="Mappings\OutageGeneratorMap.cs" />
+    <Compile Include="Mappings\OutageLineMap.cs" />
+    <Compile Include="Mappings\PSSEEquipmentMap.cs" />
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\FRPSSEGeneratorMapping.cs" />
+    <Compile Include="Models\FRPSSEMapping.cs" />
+    <Compile Include="Models\Generator.cs" />
+    <Compile Include="Models\OutageBreakerLineLoss.cs" />
+    <Compile Include="Models\OutageFormSubmission.cs" />
+    <Compile Include="Models\OutageGenerator.cs" />
+    <Compile Include="Models\OutageLine.cs" />
+    <Compile Include="Models\PSSEEquipment.cs" />
+    <Compile Include="Persistence\NHibernateHelper.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Views\BasicStudyView.xaml.cs">
       <DependentUpon>BasicStudyView.xaml</DependentUpon>
     </Compile>
@@ -190,9 +232,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\EKPC_Logo.png" />
   </ItemGroup>
