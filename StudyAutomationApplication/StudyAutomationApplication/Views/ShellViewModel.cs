@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using SAA.PSSE;
 
 namespace SAA.Views
 {
@@ -14,6 +15,7 @@ namespace SAA.Views
         private bool _isScaleGenerationActive;
         private bool _isCooperGenerationActive;
         private bool _isTransferStudyActive;
+        private string outputText;
 
         #endregion Fields
 
@@ -125,6 +127,24 @@ namespace SAA.Views
             }
         }
 
+        public string OutputText
+        {
+            get
+            {
+                return outputText;
+            }
+            set
+            {
+                outputText = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        public void AddOutput(string output)
+        {
+            OutputText = outputText + output;
+        }
+
         #endregion Properties
 
         /// <summary>
@@ -133,6 +153,10 @@ namespace SAA.Views
         public ShellViewModel()
         {
             IsHomeActive = true;
+
+            APIWrapper.ShellViewModel = this;
+
+            APIWrapper.RunCommand("echo Hello World");
         }
     }
 }
