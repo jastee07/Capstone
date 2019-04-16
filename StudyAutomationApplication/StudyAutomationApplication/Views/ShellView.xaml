@@ -89,7 +89,8 @@
                      IsReadOnly="True"
                      HorizontalScrollBarVisibility="Auto"
                      Margin="5"
-                     Grid.Row="1" />
+                     Grid.Row="1"
+                     Text="{Binding OutputText}"/>
         </Grid>
     </Grid>
 </Window>

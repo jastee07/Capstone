@@ -113,6 +113,8 @@
     <Compile Include="Models\PSSEEquipment.cs" />
     <Compile Include="Persistence\NHibernateHelper.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="PSSE\APIWrapper.cs" />
+    <Compile Include="PSSE\CommandBuilder.cs" />
     <Compile Include="Views\BasicStudyView.xaml.cs">
       <DependentUpon>BasicStudyView.xaml</DependentUpon>
     </Compile>
