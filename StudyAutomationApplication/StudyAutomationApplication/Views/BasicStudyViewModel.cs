@@ -1,10 +1,4 @@
 ﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Caliburn.Micro;
 
 namespace SAA.Views
@@ -15,7 +9,8 @@ namespace SAA.Views
         {
         }
 
-        private string basecase;
+        private string basecase, outageFile, subPath, monPath;
+        private string conPath, outputPath, macroPath;
 
         public string Basecase
         {
@@ -29,14 +24,134 @@ namespace SAA.Views
                 NotifyOfPropertyChange();
             }
         }
+        public string OutageFile
+        {
+            get
+            {
+                return outageFile;
+            }
+            set
+            {
+                outageFile = value;
+                NotifyOfPropertyChange();
+            }
+        }
+        public string Sub
+        {
+            get
+            {
+                return subPath;
+            }
+            set
+            {
+                subPath = value;
+                NotifyOfPropertyChange();
+            }
+        }
+        public string Mon
+        {
+            get
+            {
+                return monPath;
+            }
+            set
+            {
+                monPath = value;
+                NotifyOfPropertyChange();
+            }
+        }
+        public string Con
+        {
+            get
+            {
+                return conPath;
+            }
+            set
+            {
+                conPath = value;
+                NotifyOfPropertyChange();
+            }
+        }
+        public string Output
+        {
+            get
+            {
+                return outputPath;
+            }
+            set
+            {
+                outputPath = value;
+                NotifyOfPropertyChange();
+            }
+        }
+        public string Macro
+        {
+            get
+            {
+                return macroPath;
+            }
+            set
+            {
+                macroPath = value;
+                NotifyOfPropertyChange();
+            }
+        }
 
-        public void OpenFileExplorer()
+        public void SetBasecase()
         {
             var dialog = new OpenFileDialog();
 
             dialog.ShowDialog();
 
             Basecase = dialog.FileName;
+        }
+        public void SetOutageFile()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            OutageFile = dialog.FileName;
+        }
+        public void SetSub()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            Sub = dialog.FileName;
+        }
+        public void SetMon()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            Mon = dialog.FileName;
+        }
+        public void SetCon()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            Con = dialog.FileName;
+        }
+        public void SetOutput()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            Output = dialog.FileName;
+        }
+        public void SetMacro()
+        {
+            var dialog = new OpenFileDialog();
+
+            dialog.ShowDialog();
+
+            Macro = dialog.FileName;
         }
     }
 }

@@ -29,7 +29,7 @@
 
             <!-- SELECT BASECASE -->
             <Button Content="Select Basecase"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetBasecase()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="0"
@@ -47,12 +47,13 @@
 
             <!-- SELECT CSV -->
             <Button Content="Select CSV"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetOutageFile()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="2"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding OutageFile, Mode=TwoWay}"
+                     Height="25"
                      Grid.Row="2"
                      Grid.Column="1" />
             <Button Content="Display Selected CSV File(s)"
@@ -64,55 +65,59 @@
 
             <!-- SELECT SUB FILE -->
             <Button Content="Select Sub File"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetSub()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="4"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding Sub, Mode=TwoWay}"
+                     Height="25"
                      Grid.Row="4"
                      Grid.Column="1" />
 
             <!-- SLECT MON FILE -->
             <Button Content="Select Mon File"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetMon()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="5"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding Mon, Mode=TwoWay}" Height="25"
                      Grid.Row="5"
                      Grid.Column="1" />
 
             <!-- SELECT CON FILE -->
             <Button Content="Select Con File"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetCon()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="6"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding Con, Mode=TwoWay}"
+                     Height="25"
                      Grid.Row="6"
                      Grid.Column="1" />
 
             <!-- OUTPUT LOCATION -->
             <Button Content="Output Location"
-                    cal:Message.Attach="OpenFileExplorer()"
+                    cal:Message.Attach="SetOutput()"
                     Margin="5,0"
                     Height="25"
                     Grid.Row="7"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding Output, Mode=TwoWay}" Height="25"
                      Grid.Row="7"
                      Grid.Column="1" />
 
             <!-- FIND MACRO FILE -->
             <Button Content="Find Macro File"
+                    cal:Message.Attach="SetMacro()"
                     Margin="5, 0"
                     Height="25"
                     Grid.Row="8"
                     Grid.Column="0" />
-            <TextBox Height="25"
+            <TextBox Text="{Binding Macro}"
+                     Height="25"
                      Grid.Row="8"
                      Grid.Column="1" />
 
